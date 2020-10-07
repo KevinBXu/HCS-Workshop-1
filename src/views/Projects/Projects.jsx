@@ -1,9 +1,13 @@
 import React from "react";
+import Project from "../../components/Project/Project";
 
 export default function ProjectsScreen() {
   return (
     <div className="screen-background">
-      All your amazing projects will go here!
+      <Project 
+        title="Alpha Cheat AI" 
+        link="https://github.com/KevinBXu/pgss2019-cheatgame"
+      ></Project>
     </div>
   );
 }

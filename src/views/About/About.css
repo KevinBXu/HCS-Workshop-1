@@ -1,7 +1,12 @@
 .intro-background {
+  display: flex;
+  flex-direction: row;
 }
 
 .intro-item {
+  display: flex;
+  flex: 1;
+  padding: 10px;
 }
 
 .intro-item h1,

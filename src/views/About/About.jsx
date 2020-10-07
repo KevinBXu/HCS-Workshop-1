@@ -1,17 +1,51 @@
 import React from "react";
 import "./About.css";
-import CutePic from "../../assets/bighappy.png";
+import "../Experience/Experience.css";
+import CutePic from "../../assets/Me.jpg";
+
+function FunFact(props) {
+  return(
+    <div
+      onClick ={() => {
+        props.setActiveFunFact(props.fact);
+      }}
+      className="timeline-item"
+    >
+    <p>Click for Fun Fact</p>
+      
+    </div>
+  );
+}
 
 export default function AboutScreen() {
+  const [activeFunFact, setActiveFunFact] = React.useState("Click on Buttons for Fun Facts");
+
   return (
     <div className="screen-background">
       <div className="intro-background">
         <div className="intro-item">
-          <div>here you'll put a picture of yourself</div>
+          <img src={CutePic} className="intro-picture" alt="This is Me"/>
         </div>
         <div className="intro-item">
-          Wow wow wow Your Name is a pretty cool person! check out all these
-          details
+          I was born in Buffalo, NY on October 25, 2001 but moved shortly thereafter to Erie, PA after spending a year in China. I went to high school at Northwest Pennsylvania Collegiate Academy and now am a freshman at Harvard College. 
+          <br></br>
+          <br></br>
+          <br></br>
+          {activeFunFact}
+        </div>
+        <div className="intro-item">
+          <FunFact
+            fact = "I was named after the movie home alone"
+            setActiveFunFact={setActiveFunFact}
+          ></FunFact>
+          <FunFact
+            fact = "I broke a TV fighting over candy when I was 8 and mother is charing me interest"
+            setActiveFunFact={setActiveFunFact}
+          ></FunFact>
+          <FunFact
+            fact = "I can recite 50 digits of pi"
+            setActiveFunFact={setActiveFunFact}
+          ></FunFact>
         </div>
       </div>
     </div>
