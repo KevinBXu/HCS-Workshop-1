@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.css";
-import "../Experience/Experience.css";
 import CutePic from "../../assets/Me.jpg";
 
 function FunFact(props) {
@@ -9,7 +8,7 @@ function FunFact(props) {
       onClick ={() => {
         props.setActiveFunFact(props.fact);
       }}
-      className="timeline-item"
+      className="funfact-item"
     >
     <p>Click for Fun Fact</p>
       
@@ -28,10 +27,6 @@ export default function AboutScreen() {
         </div>
         <div className="intro-item">
           I was born in Buffalo, NY on October 25, 2001 but moved shortly thereafter to Erie, PA after spending a year in China. I went to high school at Northwest Pennsylvania Collegiate Academy and now am a freshman at Harvard College. 
-          <br></br>
-          <br></br>
-          <br></br>
-          {activeFunFact}
         </div>
         <div className="intro-item">
           <FunFact
@@ -48,6 +43,8 @@ export default function AboutScreen() {
           ></FunFact>
         </div>
       </div>
+      <br></br>
+          <h2>{activeFunFact}</h2>
     </div>
   );
 }

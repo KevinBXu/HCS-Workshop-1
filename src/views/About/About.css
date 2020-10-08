@@ -24,3 +24,24 @@ li {
   width: 100%;
   height: 100%;
 }
+
+.funfact-item {
+  display: flex;
+  width: 50%;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.funfact-item:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  background-color: lightskyblue;
+}
+
+h2.facts{
+  color: darkcyan;
+}

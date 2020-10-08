@@ -10,14 +10,14 @@ function TimeLineItem(props) {
       }}
       className="timeline-item"
     >
-      <h1>{props.title}</h1>
+      <h2>{props.title}</h2>
       
     </div>
   );
 }
 
 export default function ExperienceScreen() {
-  const [activeTitle, setActiveTitle] = React.useState("");
+  const [activeTitle, setActiveTitle] = React.useState("Click on Experiences");
   const [activeDescription, setActiveDescription] = React.useState("");
 
   return (

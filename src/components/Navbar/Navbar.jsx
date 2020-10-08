@@ -38,6 +38,7 @@ export default function Navbar() {
         <Link className="nav-link" to={{ pathname: "/about" }}>About</Link>
         <Link className="nav-link" to={{ pathname: "/experience" }}>Experiences</Link>
         <Link className="nav-link" to={{ pathname: "/projects" }}>Projects</Link>
+        <Link className="nav-link" to={{ pathname: "/education" }}>Education</Link>
       </div>
     </>
   );
